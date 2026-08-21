@@ -29,6 +29,7 @@ h2 { font-size: 1.2rem; margin-top: 0; }
   border: 1px solid var(--line); padding: 1rem; background: #14120e;
   font-family: "Segoe UI", system-ui, sans-serif;
 }
+.app-icon { display: block; width: 64px; height: 64px; border-radius: 14px; margin-bottom: 0.6rem; object-fit: cover; border: 1px solid var(--line); }
 .card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
 .card p { margin: 0 0 0.8rem; color: var(--mute); font-size: 0.92rem; }
 .badge { font-size: 0.72rem; color: var(--accent); letter-spacing: 0.06em; }

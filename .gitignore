@@ -2,3 +2,6 @@
 Thumbs.db
 .idea/
 .vscode/
+videos/_build/
+videos/_frames/
+videos/_preview-*.jpg

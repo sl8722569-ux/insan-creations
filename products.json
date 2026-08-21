@@ -11,17 +11,26 @@
       "name": "J.A.R.V.I.S",
       "status": "Live · Early Access",
       "kind": "App",
-      "platforms": "Windows · Linux · macOS · Web companion · Android/iOS via web",
+      "platforms": "Windows · Linux · macOS · Web companion",
       "blurb": "Personal AI assistant: voice, chat, apps, privacy-first permissions. Phase 1 [EARLY ACCESS] · Phase 2 [EARLY ACCESS FINAL ACT].",
       "page": "products/jarvis.html"
+    },
+    {
+      "id": "study-assistant",
+      "name": "AI Study Assistant",
+      "status": "Live · from your GitHub",
+      "kind": "App / platform",
+      "platforms": "Web (repo) · multilingual study",
+      "blurb": "Multilingual, curriculum-aware study platform. Source: sl8722569-ux/ai-study-assistant.",
+      "page": "products/study-assistant.html"
     },
     {
       "id": "jarvis-web",
       "name": "J.A.R.V.I.S Web Companion",
       "status": "Live",
       "kind": "Website / PWA",
-      "platforms": "Browser · Android Add to Home Screen · iPhone Safari",
-      "blurb": "Lightweight web front for J.A.R.V.I.S. Use on any phone until a native APK is published.",
+      "platforms": "Browser · Android · iPhone",
+      "blurb": "Lightweight web front for J.A.R.V.I.S. Use on phones until a native APK is published.",
       "page": "https://sl8722569-ux.github.io/jarvis-assitant/webapp/"
     },
     {
@@ -30,7 +39,7 @@
       "status": "Live",
       "kind": "Website",
       "platforms": "Web",
-      "blurb": "This studio site — catalogue of every creation, downloads, and company identity.",
+      "blurb": "Studio home — catalogue of every creation and downloads.",
       "page": "index.html"
     }
   ]

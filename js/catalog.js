@@ -15,6 +15,7 @@ fetch("products.json")
       var icon = p.icon || ("icons/" + (p.id || "") + "-192.png");
       if (p.id === "jarvis" || p.id === "jarvis-web") icon = "icons/jarvis-192.png";
       if (p.id === "study-assistant") icon = "icons/study-assistant-192.png";
+      if (p.id === "univista") icon = "icons/univista-192.png";
       if (p.id === "studio-site") icon = "icons/insan-creations-192.png";
       if (String(p.page || "").indexOf("products/") === 0) {
         icon = "../" + icon.replace(/^icons/, "icons");
@@ -23,6 +24,7 @@ fetch("products.json")
       var iconSrc = "icons/";
       if (p.id === "jarvis" || p.id === "jarvis-web") iconSrc += "jarvis-192.png";
       else if (p.id === "study-assistant") iconSrc += "study-assistant-192.png";
+      else if (p.id === "univista") iconSrc += "univista-192.png";
       else iconSrc += "insan-creations-192.png";
       el.innerHTML =
         '<img class="app-icon" src="' + iconSrc + '" alt="" width="64" height="64" />' +

@@ -25,6 +25,15 @@
       "page": "products/study-assistant.html"
     },
     {
+      "id": "univista",
+      "name": "UniVista",
+      "status": "Live · Early Access",
+      "kind": "App / platform",
+      "platforms": "Web (PWA) · Windows · Android · iPhone · TV later",
+      "blurb": "Universal camera, AI, security and automation platform. One interface, many cameras. Early Access: live view, Mira, local recording, privacy.",
+      "page": "products/univista.html"
+    },
+    {
       "id": "jarvis-web",
       "name": "J.A.R.V.I.S Web Companion",
       "status": "Live",

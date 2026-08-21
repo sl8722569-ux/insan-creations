@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sl8722569-ux.github.io/insan-creations/sitemap.xml
-Sitemap: https://insancreations.is-a.dev/sitemap.xml

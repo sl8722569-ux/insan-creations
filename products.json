@@ -11,7 +11,7 @@
       "name": "J.A.R.V.I.S",
       "status": "Live · Early Access",
       "kind": "App",
-      "platforms": "Windows · Linux · macOS · Web companion",
+      "platforms": "Windows app · Linux app · macOS app · Android app (PWA) · iPhone app (PWA)",
       "blurb": "Personal AI assistant: voice, chat, apps, privacy-first permissions. Phase 1 [EARLY ACCESS] · Phase 2 [EARLY ACCESS FINAL ACT].",
       "page": "products/jarvis.html"
     },
@@ -30,7 +30,7 @@
       "status": "Live",
       "kind": "Website / PWA",
       "platforms": "Browser · Android · iPhone",
-      "blurb": "Lightweight web front for J.A.R.V.I.S. Use on phones until a native APK is published.",
+      "blurb": "J.A.R.V.I.S as a standalone app on Android, iPhone, and desktop (Install / Add to Home Screen).",
       "page": "https://sl8722569-ux.github.io/jarvis-assitant/webapp/"
     },
     {

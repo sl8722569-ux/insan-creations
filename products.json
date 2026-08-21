@@ -1,23 +1,37 @@
 {
   "studio": {
     "name": "INSAN CREATIONS",
+    "domain": "https://insancreations.com/",
     "tagline": "Software, assistants, and tools made to actually run on the machines people have.",
-    "about": "INSAN CREATIONS is a small independent studio. We build lightweight apps and experiments — starting with J.A.R.V.I.S, a personal Windows assistant designed for ordinary laptops, not only high-end PCs. New creations can be added here without rebuilding the site."
+    "about": "INSAN CREATIONS is an independent studio. Every app and site we ship is listed here."
   },
   "products": [
     {
       "id": "jarvis",
       "name": "J.A.R.V.I.S",
-      "status": "Early Access",
-      "phases": "Phase 1 [EARLY ACCESS] · Phase 2 [EARLY ACCESS FINAL ACT]",
-      "blurb": "A local personal AI assistant for Windows: voice, chat, apps, privacy permissions. Built for Intel i3, 8 GB RAM, and HDD-class machines.",
-      "page": "products/jarvis.html",
-      "downloads": {
-        "windows_zip": "https://github.com/sl8722569-ux/jarvis-assitant/releases/latest/download/JARVIS-Windows-Phase2.zip",
-        "windows_portable": "https://github.com/sl8722569-ux/jarvis-assitant/releases/latest/download/JARVIS-Windows-Portable.exe-pack.zip",
-        "android_zip": "https://github.com/sl8722569-ux/jarvis-assitant/releases/latest/download/JARVIS-Android-WebCompanion.zip",
-        "github": "https://github.com/sl8722569-ux/jarvis-assitant"
-      }
+      "status": "Live · Early Access",
+      "kind": "App",
+      "platforms": "Windows · Linux · macOS · Web companion · Android/iOS via web",
+      "blurb": "Personal AI assistant: voice, chat, apps, privacy-first permissions. Phase 1 [EARLY ACCESS] · Phase 2 [EARLY ACCESS FINAL ACT].",
+      "page": "products/jarvis.html"
+    },
+    {
+      "id": "jarvis-web",
+      "name": "J.A.R.V.I.S Web Companion",
+      "status": "Live",
+      "kind": "Website / PWA",
+      "platforms": "Browser · Android Add to Home Screen · iPhone Safari",
+      "blurb": "Lightweight web front for J.A.R.V.I.S. Use on any phone until a native APK is published.",
+      "page": "https://sl8722569-ux.github.io/jarvis-assitant/webapp/"
+    },
+    {
+      "id": "studio-site",
+      "name": "INSAN CREATIONS Website",
+      "status": "Live",
+      "kind": "Website",
+      "platforms": "Web",
+      "blurb": "This studio site — catalogue of every creation, downloads, and company identity.",
+      "page": "index.html"
     }
   ]
 }

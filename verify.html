@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Domain &amp; Google verification — INSAN CREATIONS</title>
+  <link rel="stylesheet" href="css/studio.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="bar">
+      <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">INSAN <span>CREATIONS</span></a></div>
+    </header>
+    <p class="kicker">SETUP</p>
+    <h1>How to use https://insancreations.com/ and Google verification</h1>
+    <p class="lede">
+      The studio site is ready for the custom domain. Buying the name, pointing DNS, and Google’s
+      company/app checks have to be done in <strong>your</strong> accounts — nobody else can finish those forms for you.
+    </p>
+
+    <section class="panel">
+      <h2>1. Buy the domain</h2>
+      <ol>
+        <li>Go to a registrar (Namecheap, Google Domains/Squarespace, Cloudflare, GoDaddy).</li>
+        <li>Search for <strong>insancreations.com</strong> and purchase it (you pay yearly).</li>
+        <li>Sign in with the email you want as company contact (e.g. sl8722569@gmail.com).</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h2>2. Point DNS at this site (GitHub Pages)</h2>
+      <p>In the domain’s DNS settings add:</p>
+      <ul>
+        <li><code>A</code> record @ → <code>185.199.108.153</code></li>
+        <li><code>A</code> record @ → <code>185.199.109.153</code></li>
+        <li><code>A</code> record @ → <code>185.199.110.153</code></li>
+        <li><code>A</code> record @ → <code>185.199.111.153</code></li>
+        <li><code>CNAME</code> www → <code>sl8722569-ux.github.io</code></li>
+      </ul>
+      <p>Wait 15 minutes to 24 hours. Then https://insancreations.com/ should open this studio.</p>
+    </section>
+
+    <section class="panel">
+      <h2>3. Google — websites</h2>
+      <ol>
+        <li>Open <a href="https://search.google.com/search-console">Google Search Console</a></li>
+        <li>Add property: <code>https://insancreations.com/</code></li>
+        <li>Verify with a DNS TXT record (Google shows the exact value) or an HTML file Google gives you — put that file in this repo’s root and tell us to publish it.</li>
+        <li>Also add <code>https://sl8722569-ux.github.io/insan-creations/</code> until the custom domain is live.</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h2>4. Google — company (Business Profile)</h2>
+      <ol>
+        <li>Open <a href="https://business.google.com/">Google Business Profile</a></li>
+        <li>Create “INSAN CREATIONS”</li>
+        <li>Website: https://insancreations.com/</li>
+        <li>Complete address/phone. Google often mails a postcard code — only the person at that address can finish verification.</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h2>5. Google — apps (Play Store)</h2>
+      <ol>
+        <li>Open <a href="https://play.google.com/console">Google Play Console</a></li>
+        <li>Pay the one-time developer fee (set by Google, currently around USD 25).</li>
+        <li>Organization name: INSAN CREATIONS</li>
+        <li>A native APK must exist before an app listing can be published. J.A.R.V.I.S desktop is Windows/Python; Android native APK is still future work.</li>
+      </ol>
+    </section>
+
+    <footer>INSAN CREATIONS cannot complete Google’s identity checks without your login, payment, and (for Business) a verifiable address.</footer>
+  </div>
+</body>
+</html>

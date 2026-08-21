@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>J.A.R.V.I.S — INSAN CREATIONS</title>
+  <link rel="stylesheet" href="../css/studio.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="bar">
+      <div class="logo"><a href="../index.html" style="color:inherit;text-decoration:none;">INSAN <span>CREATIONS</span></a></div>
+      <nav>
+        <a href="../index.html">Studio</a>
+        <a href="#download">Download</a>
+      </nav>
+    </header>
+
+    <p class="kicker">AN INSAN CREATIONS PRODUCT</p>
+    <h1>J.A.R.V.I.S</h1>
+    <p class="lede">
+      J.A.R.V.I.S (Just A Rather Very Intelligent System) is a personal AI assistant you run yourself.
+      It talks, listens when you allow the microphone, opens apps and websites, and helps with everyday
+      Windows tasks. It is aimed at ordinary hardware — including Intel Core i3, 8 GB RAM, and HDD storage —
+      with permissions off until you turn them on. This is Early Access:
+      <strong>Phase 1 [EARLY ACCESS]</strong> and <strong>Phase 2 [EARLY ACCESS FINAL ACT]</strong>.
+    </p>
+
+    <section class="panel">
+      <h2>Features</h2>
+      <ul class="feat">
+        <li>Wake phrase “Jarvis Activate” / “Jarvis Standby”</li>
+        <li>Voice + text chat; English, Hindi, Punjabi</li>
+        <li>Conversation follow-ups without repeating the wake phrase</li>
+        <li>Open apps, folders, sites, and web AIs (ChatGPT, Gemini…)</li>
+        <li>Notes, clipboard, timers, system info, gaming mode</li>
+        <li>Safe file helper; WhatsApp Web only after you confirm</li>
+        <li>Themes, layouts (full / sidebar / voice only)</li>
+        <li>Plugins: calculator, weather, translator, Steam &amp; music helpers</li>
+        <li>Mic / speaker tests and voice diagnostics</li>
+        <li>Share the public project only — never your private files</li>
+      </ul>
+    </section>
+
+    <section id="download" class="panel">
+      <h2>Download — pick device and format</h2>
+      <div class="picker">
+        <div>
+          <label for="device">Which device?</label>
+          <select id="device">
+            <option value="windows">Windows 10 / 11</option>
+            <option value="android">Android</option>
+            <option value="ios">iPhone / iPad</option>
+            <option value="linux">Linux</option>
+            <option value="macos">macOS</option>
+            <option value="web">Web browser</option>
+          </select>
+        </div>
+        <div>
+          <label for="format">Format</label>
+          <select id="format">
+            <option value="zip">ZIP (installer / source)</option>
+            <option value="portable">Windows portable (JARVIS.exe pack)</option>
+            <option value="apk">APK</option>
+            <option value="xapk">XAPK</option>
+          </select>
+        </div>
+      </div>
+      <div class="status" id="status"></div>
+      <button class="btn" type="button" id="dl">Download</button>
+      <p class="status" style="min-height:0;">Windows: unzip, run INSTALL-WINDOWS.bat. Linux/macOS: installers inside the ZIP.</p>
+    </section>
+
+    <footer>INSAN CREATIONS · J.A.R.V.I.S [EARLY ACCESS]</footer>
+  </div>
+  <script>
+    var REL = "https://github.com/sl8722569-ux/jarvis-assitant/releases/latest/download/";
+    var WEB = "https://sl8722569-ux.github.io/jarvis-assitant/webapp/";
+    var MAP = {
+      windows: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: REL + "JARVIS-Windows-Portable.exe-pack.zip", apk: null, xapk: null },
+      android: { zip: REL + "JARVIS-Android-WebCompanion.zip", portable: null, apk: REL + "JARVIS-Android.apk", xapk: REL + "JARVIS-Android.xapk" },
+      ios: { zip: null, portable: null, apk: null, xapk: null },
+      linux: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: null, apk: null, xapk: null },
+      macos: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: null, apk: null, xapk: null },
+      web: { zip: null, portable: null, apk: null, xapk: null }
+    };
+    var device = document.getElementById("device");
+    var format = document.getElementById("format");
+    var status = document.getElementById("status");
+    function info() {
+      var d = device.value, f = format.value, url = MAP[d] && MAP[d][f];
+      if (d === "web") { status.textContent = "Opens the web companion in your browser (Add to Home Screen on phones)."; return; }
+      if (url && !(f === "apk" || f === "xapk")) { status.textContent = "Ready: " + f.toUpperCase() + " for " + d + "."; return; }
+      if (f === "apk" || f === "xapk") { status.textContent = "APK/XAPK are listed for Android. If the file 404s, native build is not published yet — use ZIP companion or Web."; return; }
+      status.textContent = "That combo is not available. Try ZIP for Windows/Linux/macOS, or Web for phones.";
+    }
+    document.getElementById("dl").onclick = function () {
+      var d = device.value, f = format.value;
+      if (d === "web") { location.href = WEB; return; }
+      var url = MAP[d] && MAP[d][f];
+      if (!url) { info(); return; }
+      location.href = url;
+    };
+    device.onchange = info; format.onchange = info; info();
+  </script>
+</body>
+</html>

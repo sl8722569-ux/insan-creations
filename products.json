@@ -1,0 +1,23 @@
+{
+  "studio": {
+    "name": "INSAN CREATIONS",
+    "tagline": "Software, assistants, and tools made to actually run on the machines people have.",
+    "about": "INSAN CREATIONS is a small independent studio. We build lightweight apps and experiments — starting with J.A.R.V.I.S, a personal Windows assistant designed for ordinary laptops, not only high-end PCs. New creations can be added here without rebuilding the site."
+  },
+  "products": [
+    {
+      "id": "jarvis",
+      "name": "J.A.R.V.I.S",
+      "status": "Early Access",
+      "phases": "Phase 1 [EARLY ACCESS] · Phase 2 [EARLY ACCESS FINAL ACT]",
+      "blurb": "A local personal AI assistant for Windows: voice, chat, apps, privacy permissions. Built for Intel i3, 8 GB RAM, and HDD-class machines.",
+      "page": "products/jarvis.html",
+      "downloads": {
+        "windows_zip": "https://github.com/sl8722569-ux/jarvis-assitant/releases/latest/download/JARVIS-Windows-Phase2.zip",
+        "windows_portable": "https://github.com/sl8722569-ux/jarvis-assitant/releases/latest/download/JARVIS-Windows-Portable.exe-pack.zip",
+        "android_zip": "https://github.com/sl8722569-ux/jarvis-assitant/releases/latest/download/JARVIS-Android-WebCompanion.zip",
+        "github": "https://github.com/sl8722569-ux/jarvis-assitant"
+      }
+    }
+  ]
+}

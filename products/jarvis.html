@@ -113,6 +113,7 @@
     }
     document.getElementById("dl").onclick = function () {
       var d = device.value, f = format.value;
+      if (window.INSAN_STATS) window.INSAN_STATS.download("jarvis", d === "web" ? "web" : f);
       if (d === "web") { location.href = WEB; return; }
       var url = MAP[d] && MAP[d][f];
       if (!url) { info(); return; }
@@ -120,5 +121,6 @@
     };
     device.onchange = info; format.onchange = info; info();
   </script>
+  <script src="../js/stats.js" data-app="jarvis"></script>
 </body>
 </html>

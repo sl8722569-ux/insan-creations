@@ -65,6 +65,9 @@
     var el = ev.target && ev.target.closest ? ev.target.closest("a,button") : null;
     if (!el) return;
     var marked = el.getAttribute("data-download");
+    if (el.getAttribute("data-donate")) {
+      ping("donate-clicks");
+    }
     if (marked) {
       window.INSAN_STATS.download(marked, el.getAttribute("data-kind") || "");
       return;

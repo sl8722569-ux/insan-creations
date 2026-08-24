@@ -276,6 +276,27 @@ TUTORIALS = [
              "You are ready. All apps and tutorials live on the Insan Creations website."),
         ],
     },
+    {
+        "id": "vaani",
+        "accent": (232, 184, 74),
+        "bg": (7, 6, 15),
+        "icon": ICONS / "language-ai-192.png",
+        "hero": FRAMES / "vaani.jpg",
+        "slides": [
+            ("INSAN CREATIONS TUTORIAL", "Vaani", "Universal language and script AI. How to open, pick a language, learn, and trace.",
+             "This is a short tutorial for Vaani, the universal language and script A I from Insan Creations."),
+            ("STEP 1", "Open Vaani", "Open Early Access from the INSAN CREATIONS site, or from GitHub Pages. Add to Home Screen if you want an app icon.",
+             "Step one. Open Vaani Early Access from the Insan Creations website, or from GitHub Pages. You can add it to your home screen."),
+            ("STEP 2", "Pick from the catalogue", "Languages, scripts, varieties and transliteration are separate. Example: Punjabi is a language. Gurmukhi is a script.",
+             "Step two. Open the catalogue. Languages, scripts, and transliteration are separate. Punjabi is a language. Gurmukhi is a script."),
+            ("STEP 3", "Learn and listen", "Answer meaning, script, reading and listen questions. Tap Hear it. XP and streak stay on this device.",
+             "Step three. Use Learn. Answer questions, tap Hear it, and keep your X P and streak on this device."),
+            ("STEP 4", "Trace and ask the tutor", "Trace a glyph. Ask the on-device tutor about a greeting or a script. No A I keys are in the page.",
+             "Step four. Trace a glyph, or ask the on-device tutor about a greeting or a script. There are no A I keys in the page."),
+            ("DONE", "You are ready", "App: sl8722569-ux.github.io/universal-language-ai/web/",
+             "You are ready. Vaani is on the Insan Creations website."),
+        ],
+    },
 ]
 
 
@@ -345,7 +366,10 @@ def main() -> int:
         print("ffmpeg missing", FFMPEG, file=sys.stderr)
         return 1
     BUILD.mkdir(parents=True, exist_ok=True)
+    only = sys.argv[1] if len(sys.argv) > 1 else None
     for spec in TUTORIALS:
+        if only and spec["id"] != only:
+            continue
         build_one(spec)
     return 0
 

@@ -10,18 +10,14 @@
     } catch (e) { /* ignore */ }
   }
   function inferApp() {
+    var href = ((location.href || "") + " " + (location.pathname || "")).toLowerCase();
+    // Studio catalogue / product pages are the website, not the apps.
+    if (href.indexOf("insan-creations") >= 0) return "studio";
+    if (href.indexOf("jarvis-assitant") >= 0 || href.indexOf("/webapp") >= 0) return "jarvis";
+    if (href.indexOf("universal-language") >= 0) return "language-ai";
+    if (href.indexOf("univista") >= 0) return "univista";
+    if (href.indexOf("ai-study-assistant") >= 0) return "study-assistant";
     if (script && script.getAttribute("data-app")) return script.getAttribute("data-app");
-    var host = (location.hostname || "") + (location.pathname || "");
-    host = host.toLowerCase();
-    if (host.indexOf("univista") >= 0) return "univista";
-    if (host.indexOf("language") >= 0) return "language-ai";
-    if (host.indexOf("jarvis") >= 0) return "jarvis";
-    if (host.indexOf("study-assistant") >= 0 || host.indexOf("ai-study") >= 0) return "study-assistant";
-    var p = (location.pathname || "").toLowerCase();
-    if (p.indexOf("univista") >= 0) return "univista";
-    if (p.indexOf("language") >= 0) return "language-ai";
-    if (p.indexOf("jarvis") >= 0) return "jarvis";
-    if (p.indexOf("study") >= 0) return "study-assistant";
     return "studio";
   }
   var app = inferApp();

@@ -15,6 +15,7 @@
     if (href.indexOf("insan-creations") >= 0) return "studio";
     if (href.indexOf("jarvis-assitant") >= 0 || href.indexOf("/webapp") >= 0) return "jarvis";
     if (href.indexOf("universal-language") >= 0) return "language-ai";
+    if (href.indexOf("/nexcode") >= 0) return "nexcode";
     if (href.indexOf("univista") >= 0) return "univista";
     if (href.indexOf("ai-study-assistant") >= 0) return "study-assistant";
     if (script && script.getAttribute("data-app")) return script.getAttribute("data-app");

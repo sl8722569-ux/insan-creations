@@ -43,6 +43,15 @@
       "page": "products/language-ai.html"
     },
     {
+      "id": "nexcode",
+      "name": "NEXCODE",
+      "status": "Live · Early Access",
+      "kind": "App / editor",
+      "platforms": "Web (PWA) · Windows · Android · iPhone",
+      "blurb": "Cross-device code editor. Host and mobile views, local files, sessions, command palette.",
+      "page": "products/nexcode.html"
+    },
+    {
       "id": "jarvis-web",
       "name": "J.A.R.V.I.S Web Companion",
       "status": "Live",

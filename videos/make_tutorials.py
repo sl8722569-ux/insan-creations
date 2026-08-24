@@ -297,6 +297,27 @@ TUTORIALS = [
              "You are ready. Vaani is on the Insan Creations website."),
         ],
     },
+    {
+        "id": "nexcode",
+        "accent": (0, 120, 212),
+        "bg": (24, 24, 24),
+        "icon": ICONS / "nexcode-192.png",
+        "hero": FRAMES / "nexcode.jpg",
+        "slides": [
+            ("INSAN CREATIONS TUTORIAL", "NEXCODE", "Cross-device editor. How to open, edit files, and use Host and Mobile views.",
+             "This is a short tutorial for Nexcode, the cross-device editor from Insan Creations."),
+            ("STEP 1", "Open NEXCODE", "Open Early Access from the INSAN CREATIONS site or GitHub Pages. Files stay in this browser.",
+             "Step one. Open Nexcode Early Access from the Insan Creations website. Files stay in this browser."),
+            ("STEP 2", "Open a file", "Use Explorer, or press Control O. Click app.js. Type. It saves on this device.",
+             "Step two. Open a file. Use Explorer, or press Control O. Click app.js and type. It saves on this device."),
+            ("STEP 3", "Command palette", "Press Control Shift P. Search commands: sessions, mobile view, pairing demo.",
+             "Step three. Press Control Shift P for the command palette. Search sessions, mobile view, or pairing."),
+            ("STEP 4", "Host and Mobile", "Use the Host and Mobile switch. Same project, smaller chrome. Not a second physical phone yet.",
+             "Step four. Switch Host and Mobile. Same project, smaller screen. A real second phone needs a backend later."),
+            ("DONE", "You are ready", "App: sl8722569-ux.github.io/nexcode/web/",
+             "You are ready. Nexcode is on the Insan Creations website."),
+        ],
+    },
 ]
 
 

@@ -35,11 +35,11 @@
     },
     {
       "id": "language-ai",
-      "name": "Universal Language Learning AI",
+      "name": "Vaani",
       "status": "Live · Early Access",
       "kind": "App / platform",
       "platforms": "Web (PWA) · Windows · Android · iPhone",
-      "blurb": "Languages, scripts and transliteration in one catalogue. Learn, trace, tutor, adaptive scores. Original prototype kept.",
+      "blurb": "Universal language & script AI. Languages, scripts and transliteration in one catalogue. Learn, trace, tutor, adaptive scores.",
       "page": "products/language-ai.html"
     },
     {

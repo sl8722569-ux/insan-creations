@@ -14,10 +14,12 @@
     var host = (location.hostname || "") + (location.pathname || "");
     host = host.toLowerCase();
     if (host.indexOf("univista") >= 0) return "univista";
+    if (host.indexOf("language") >= 0) return "language-ai";
     if (host.indexOf("jarvis") >= 0) return "jarvis";
     if (host.indexOf("study-assistant") >= 0 || host.indexOf("ai-study") >= 0) return "study-assistant";
     var p = (location.pathname || "").toLowerCase();
     if (p.indexOf("univista") >= 0) return "univista";
+    if (p.indexOf("language") >= 0) return "language-ai";
     if (p.indexOf("jarvis") >= 0) return "jarvis";
     if (p.indexOf("study") >= 0) return "study-assistant";
     return "studio";

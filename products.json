@@ -34,6 +34,15 @@
       "page": "products/univista.html"
     },
     {
+      "id": "language-ai",
+      "name": "Universal Language Learning AI",
+      "status": "Live · Early Access",
+      "kind": "App / platform",
+      "platforms": "Web (PWA) · Windows · Android · iPhone",
+      "blurb": "Languages, scripts and transliteration in one catalogue. Learn, trace, tutor, adaptive scores. Original prototype kept.",
+      "page": "products/language-ai.html"
+    },
+    {
       "id": "jarvis-web",
       "name": "J.A.R.V.I.S Web Companion",
       "status": "Live",

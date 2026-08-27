@@ -11,7 +11,7 @@
       "name": "J.A.R.V.I.S",
       "status": "Live · Early Access",
       "kind": "App",
-      "platforms": "Windows (Python) · Web companion (PWA) · Linux/macOS experimental source",
+      "platforms": "Windows (Python) · Android APK (WebView companion) · Web companion (PWA)",
       "blurb": "Personal AI assistant: voice, chat, apps, privacy-first permissions. Phase 1 [EARLY ACCESS] · Phase 2 [EARLY ACCESS FINAL ACT].",
       "page": "products/jarvis.html"
     },
@@ -20,8 +20,8 @@
       "name": "AI Study Assistant",
       "status": "Live · from your GitHub",
       "kind": "App / platform",
-      "platforms": "Web / Add to Home Screen (not a native APK)",
-      "blurb": "Study outlines, practice prompts, and notes on this device. Template helper — not a cloud language model.",
+      "platforms": "Web / Android APK / Add to Home Screen",
+      "blurb": "Study outlines and practice. SpaceXAI when INSAN Bridge is running; templates otherwise. Not official exam papers.",
       "page": "products/study-assistant.html"
     },
     {
@@ -29,8 +29,8 @@
       "name": "UniVista",
       "status": "Live · Early Access",
       "kind": "App / platform",
-      "platforms": "Web / Add to Home Screen · this-device camera (ONVIF later)",
-      "blurb": "Early Access: this-device camera, local snapshots/clips, motion filter, Mira keywords. Not ONVIF/NVR yet.",
+      "platforms": "Web / Android APK / this-device camera / LAN ONVIF-RTSP via INSAN Bridge",
+      "blurb": "This-device camera plus LAN ONVIF/RTSP through INSAN Bridge. Mira uses SpaceXAI when the bridge has XAI_API_KEY.",
       "page": "products/univista.html"
     },
     {
@@ -38,8 +38,8 @@
       "name": "Vaani",
       "status": "Live · Early Access",
       "kind": "App / platform",
-      "platforms": "Web / Add to Home Screen (not a native APK)",
-      "blurb": "Early Access: ~27 catalogue entries (not 800). Learn, trace, on-device tutor. Languages vs scripts kept separate.",
+      "platforms": "Web / Android APK / Add to Home Screen",
+      "blurb": "Early Access: ~27 catalogue entries (not 800). Tutor uses SpaceXAI via INSAN Bridge when the key is set.",
       "page": "products/language-ai.html"
     },
     {
@@ -47,8 +47,8 @@
       "name": "NEXCODE",
       "status": "Live · Early Access",
       "kind": "App / editor",
-      "platforms": "Web / Add to Home Screen (same-browser Host/Mobile demo)",
-      "blurb": "In-browser editor with local files and command palette. Pairing is a demo, not a second physical phone.",
+      "platforms": "Web / Android APK / Host+phone pairing (PeerJS + Bridge)",
+      "blurb": "In-browser editor. Pair a real phone with the 6-digit code. SpaceXAI via INSAN Bridge.",
       "page": "products/nexcode.html"
     },
     {

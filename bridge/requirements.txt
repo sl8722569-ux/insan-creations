@@ -1,0 +1,2 @@
+# Optional ONVIF SOAP (RTSP URLs work without this)
+onvif-zeep>=0.2.24

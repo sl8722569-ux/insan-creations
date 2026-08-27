@@ -27,7 +27,7 @@
       It talks, listens when you allow the microphone, opens apps and websites, and helps with everyday
       Windows tasks. It is aimed at ordinary hardware — including Intel Core i3, 8 GB RAM, and HDD storage —
       with permissions off until you turn them on. Full voice and files are the <strong>Windows app</strong>.
-      Phones get a <strong>web companion</strong> (Add to Home Screen). There is <strong>no native APK</strong> yet.
+      Phones get a <strong>web companion</strong> and an <strong>Android APK</strong> that wraps that companion in a WebView.
     </p>
 
     <section class="panel">
@@ -85,13 +85,14 @@
             <option value="zip">ZIP (installer / source)</option>
             <option value="portable">Windows portable (JARVIS.exe pack)</option>
             <option value="webcomp">Android web companion ZIP</option>
+            <option value="apk">Android APK (WebView companion)</option>
           </select>
         </div>
       </div>
       <div class="status" id="status"></div>
       <button class="btn" type="button" id="dl">Download</button>
       <p class="status" style="min-height:0;">
-        Windows: ZIP installer or portable pack. Phones: web companion (Add to Home Screen) — no native APK yet.
+        Windows: ZIP installer or portable pack. Android: APK (WebView of the live companion) or web companion ZIP.
         Linux/macOS: Python scripts in the Windows source ZIP (experimental).
         <a href="https://sl8722569-ux.github.io/jarvis-assitant/webapp/">Open J.A.R.V.I.S web companion</a>
       </p>
@@ -104,23 +105,24 @@
     var WEB = "https://sl8722569-ux.github.io/jarvis-assitant/webapp/";
     var COMP = "https://sl8722569-ux.github.io/jarvis-assitant/downloads/JARVIS-Android-WebCompanion.zip";
     var MAP = {
-      windows: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: REL + "JARVIS-Windows-Portable.exe-pack.zip", webcomp: null },
-      android: { zip: COMP, portable: null, webcomp: COMP },
-      ios: { zip: null, portable: null, webcomp: null },
-      linux: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: null, webcomp: null },
-      macos: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: null, webcomp: null },
-      web: { zip: null, portable: null, webcomp: null }
+      windows: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: REL + "JARVIS-Windows-Portable.exe-pack.zip", webcomp: null, apk: null },
+      android: { zip: COMP, portable: null, webcomp: COMP, apk: REL + "JARVIS-Android.apk" },
+      ios: { zip: null, portable: null, webcomp: null, apk: null },
+      linux: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: null, webcomp: null, apk: null },
+      macos: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: null, webcomp: null, apk: null },
+      web: { zip: null, portable: null, webcomp: null, apk: null }
     };
     var device = document.getElementById("device");
     var format = document.getElementById("format");
     var status = document.getElementById("status");
     function info() {
       var d = device.value, f = format.value, url = MAP[d] && MAP[d][f];
-      if (d === "web" || d === "ios") { status.textContent = "Opens the web companion (Safari/Chrome → Add to Home Screen). No native iOS/APK build."; return; }
-      if (d === "android" && (f === "zip" || f === "webcomp")) { status.textContent = "Android: web companion ZIP / PWA. There is no native APK yet."; return; }
+      if (d === "web" || d === "ios") { status.textContent = "Opens the web companion (Safari/Chrome → Add to Home Screen). No native iOS app."; return; }
+      if (d === "android" && f === "apk") { status.textContent = "Android APK: WebView of the live companion. Sideload; not Play Store. Not the Windows Python app."; return; }
+      if (d === "android" && (f === "zip" || f === "webcomp")) { status.textContent = "Android: web companion ZIP / PWA. APK is the installable WebView wrapper."; return; }
       if ((d === "linux" || d === "macos") && f === "zip") { status.textContent = "Experimental: this ZIP is the Windows/Python source. Use the Linux/macOS scripts inside. Not a native installer."; return; }
       if (url) { status.textContent = "Ready: " + f + " for " + d + "."; return; }
-      status.textContent = "That combo is not available. Windows: ZIP or portable. Phones: Web. No APK/XAPK is published.";
+      status.textContent = "That combo is not available. Windows: ZIP or portable. Android: APK or web companion. iPhone: Web.";
     }
     document.getElementById("dl").onclick = function () {
       var d = device.value, f = format.value;

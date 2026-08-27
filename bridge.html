@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>INSAN Bridge — INSAN CREATIONS</title>
+  <link rel="stylesheet" href="css/studio.css" />
+  <link rel="icon" href="icons/insan-creations-32.png" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="bar">
+      <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">INSAN <span>CREATIONS</span></a></div>
+      <nav>
+        <a href="index.html">Studio</a>
+        <a href="apps.html">All apps</a>
+        <a href="tutorials.html">Tutorials</a>
+      </nav>
+    </header>
+    <p class="kicker">OWNER SERVICE · RUNS ON YOUR PC</p>
+    <h1>INSAN Bridge</h1>
+    <p class="lede">
+      GitHub Pages cannot hold an API key or talk to ONVIF cameras. Bridge is a small Python server on
+      <strong>this computer</strong> (port 8787). Apps call it for SpaceXAI, LAN cameras, and NEXCODE rooms.
+      The key never goes in the website.
+    </p>
+    <section class="panel">
+      <h2>Start</h2>
+      <ol>
+        <li>Copy <code>bridge/.env.example</code> to <code>bridge/.env</code> and paste <code>XAI_API_KEY</code> from <a href="https://console.x.ai">console.x.ai</a>.</li>
+        <li>Run <code>bridge/Open-INSAN-Bridge.bat</code> and leave the window open.</li>
+        <li>On this PC, apps auto-detect <code>http://127.0.0.1:8787</code>.</li>
+        <li>On a phone (same Wi-Fi), set the bridge URL to the LAN address printed in that window, e.g. <code>http://192.168.1.10:8787</code>.</li>
+      </ol>
+      <p><a class="btn ghost" href="https://github.com/sl8722569-ux/insan-creations/tree/main/bridge">Bridge source on GitHub</a></p>
+    </section>
+    <section class="panel">
+      <h2>What it unlocks</h2>
+      <ul>
+        <li><strong>SpaceXAI</strong> — Mira, Vaani tutor, Study Assistant, NEXCODE AI (model grok-4.6).</li>
+        <li><strong>UniVista cameras</strong> — paste RTSP or discover ONVIF; ffmpeg serves MJPEG.</li>
+        <li><strong>NEXCODE pairing</strong> — 6-digit code maps to a live phone over PeerJS + this room list.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

@@ -23,20 +23,19 @@
     <img class="app-icon" src="../icons/univista-192.png" alt="UniVista icon" width="96" height="96" />
     <h1>UniVista</h1>
     <p class="lede">
-      UniVista Early Access uses <strong>this device’s camera</strong> in the browser: live view, local snapshots
-      and clips, a simple motion filter, and Mira keyword chat. ONVIF, RTSP, lights, alarms, cloud, and TV
-      are planned — not in this build.
+      UniVista uses <strong>this device’s camera</strong> plus <strong>LAN ONVIF/RTSP</strong> through INSAN Bridge
+      (ffmpeg → MJPEG). Mira uses SpaceXAI when the bridge has <code>XAI_API_KEY</code>. Lights, alarms, cloud, and TV are still later.
     </p>
     <section class="panel">
       <h2>Get it</h2>
       <p>
         <a class="btn" href="https://sl8722569-ux.github.io/univista/web/" data-download="univista" data-kind="web">Open Early Access app</a>
+        <a class="btn" href="https://github.com/sl8722569-ux/univista/releases/latest/download/UniVista-Android.apk" data-download="univista" data-kind="apk">Android APK</a>
         <a class="btn ghost" href="https://sl8722569-ux.github.io/univista/">Official site</a>
         <a class="btn ghost" href="https://github.com/sl8722569-ux/univista">GitHub</a>
       </p>
       <p class="status">
-        Website + installable app (PWA) on Windows, Linux, macOS, Android, iPhone, and any browser.
-        On phones: Add to Home Screen. Native APK/TV later.
+        Website + PWA + Android APK (WebView). LAN cameras: run INSAN Bridge, paste RTSP or discover ONVIF.
       </p>
     </section>
     <section id="tutorial" class="panel tutorial">

@@ -26,8 +26,8 @@
       J.A.R.V.I.S (Just A Rather Very Intelligent System) is a personal AI assistant you run yourself.
       It talks, listens when you allow the microphone, opens apps and websites, and helps with everyday
       Windows tasks. It is aimed at ordinary hardware — including Intel Core i3, 8 GB RAM, and HDD storage —
-      with permissions off until you turn them on. This is Early Access:
-      <strong>Phase 1 [EARLY ACCESS]</strong> and <strong>Phase 2 [EARLY ACCESS FINAL ACT]</strong>.
+      with permissions off until you turn them on. Full voice and files are the <strong>Windows app</strong>.
+      Phones get a <strong>web companion</strong> (Add to Home Screen). There is <strong>no native APK</strong> yet.
     </p>
 
     <section class="panel">
@@ -84,17 +84,16 @@
           <select id="format">
             <option value="zip">ZIP (installer / source)</option>
             <option value="portable">Windows portable (JARVIS.exe pack)</option>
-            <option value="apk">APK</option>
-            <option value="xapk">XAPK</option>
+            <option value="webcomp">Android web companion ZIP</option>
           </select>
         </div>
       </div>
       <div class="status" id="status"></div>
       <button class="btn" type="button" id="dl">Download</button>
       <p class="status" style="min-height:0;">
-        App on every device: Windows installer/EXE · phones Install app / Add to Home Screen ·
-        Linux/macOS scripts in the ZIP.
-        <a href="https://sl8722569-ux.github.io/jarvis-assitant/webapp/">Open J.A.R.V.I.S app</a>
+        Windows: ZIP installer or portable pack. Phones: web companion (Add to Home Screen) — no native APK yet.
+        Linux/macOS: Python scripts in the Windows source ZIP (experimental).
+        <a href="https://sl8722569-ux.github.io/jarvis-assitant/webapp/">Open J.A.R.V.I.S web companion</a>
       </p>
     </section>
 
@@ -103,28 +102,30 @@
   <script>
     var REL = "https://github.com/sl8722569-ux/jarvis-assitant/releases/latest/download/";
     var WEB = "https://sl8722569-ux.github.io/jarvis-assitant/webapp/";
+    var COMP = "https://sl8722569-ux.github.io/jarvis-assitant/downloads/JARVIS-Android-WebCompanion.zip";
     var MAP = {
-      windows: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: REL + "JARVIS-Windows-Portable.exe-pack.zip", apk: null, xapk: null },
-      android: { zip: REL + "JARVIS-Android-WebCompanion.zip", portable: null, apk: REL + "JARVIS-Android.apk", xapk: REL + "JARVIS-Android.xapk" },
-      ios: { zip: null, portable: null, apk: null, xapk: null },
-      linux: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: null, apk: null, xapk: null },
-      macos: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: null, apk: null, xapk: null },
-      web: { zip: null, portable: null, apk: null, xapk: null }
+      windows: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: REL + "JARVIS-Windows-Portable.exe-pack.zip", webcomp: null },
+      android: { zip: COMP, portable: null, webcomp: COMP },
+      ios: { zip: null, portable: null, webcomp: null },
+      linux: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: null, webcomp: null },
+      macos: { zip: REL + "JARVIS-Windows-Phase2.zip", portable: null, webcomp: null },
+      web: { zip: null, portable: null, webcomp: null }
     };
     var device = document.getElementById("device");
     var format = document.getElementById("format");
     var status = document.getElementById("status");
     function info() {
       var d = device.value, f = format.value, url = MAP[d] && MAP[d][f];
-      if (d === "web") { status.textContent = "Opens the web companion in your browser (Add to Home Screen on phones)."; return; }
-      if (url && !(f === "apk" || f === "xapk")) { status.textContent = "Ready: " + f.toUpperCase() + " for " + d + "."; return; }
-      if (f === "apk" || f === "xapk") { status.textContent = "APK/XAPK are listed for Android. If the file 404s, native build is not published yet — use ZIP companion or Web."; return; }
-      status.textContent = "That combo is not available. Try ZIP for Windows/Linux/macOS, or Web for phones.";
+      if (d === "web" || d === "ios") { status.textContent = "Opens the web companion (Safari/Chrome → Add to Home Screen). No native iOS/APK build."; return; }
+      if (d === "android" && (f === "zip" || f === "webcomp")) { status.textContent = "Android: web companion ZIP / PWA. There is no native APK yet."; return; }
+      if ((d === "linux" || d === "macos") && f === "zip") { status.textContent = "Experimental: this ZIP is the Windows/Python source. Use the Linux/macOS scripts inside. Not a native installer."; return; }
+      if (url) { status.textContent = "Ready: " + f + " for " + d + "."; return; }
+      status.textContent = "That combo is not available. Windows: ZIP or portable. Phones: Web. No APK/XAPK is published.";
     }
     document.getElementById("dl").onclick = function () {
       var d = device.value, f = format.value;
       if (window.INSAN_STATS) window.INSAN_STATS.download("jarvis", d === "web" ? "web" : f);
-      if (d === "web") { location.href = WEB; return; }
+      if (d === "web" || d === "ios") { location.href = WEB; return; }
       var url = MAP[d] && MAP[d][f];
       if (!url) { info(); return; }
       location.href = url;

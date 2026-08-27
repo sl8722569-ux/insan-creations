@@ -11,7 +11,7 @@
       "name": "J.A.R.V.I.S",
       "status": "Live · Early Access",
       "kind": "App",
-      "platforms": "Windows app · Linux app · macOS app · Android app (PWA) · iPhone app (PWA)",
+      "platforms": "Windows (Python) · Web companion (PWA) · Linux/macOS experimental source",
       "blurb": "Personal AI assistant: voice, chat, apps, privacy-first permissions. Phase 1 [EARLY ACCESS] · Phase 2 [EARLY ACCESS FINAL ACT].",
       "page": "products/jarvis.html"
     },
@@ -20,8 +20,8 @@
       "name": "AI Study Assistant",
       "status": "Live · from your GitHub",
       "kind": "App / platform",
-      "platforms": "Web (repo) · multilingual study",
-      "blurb": "Multilingual, curriculum-aware study platform. Source: sl8722569-ux/ai-study-assistant.",
+      "platforms": "Web / Add to Home Screen (not a native APK)",
+      "blurb": "Study outlines, practice prompts, and notes on this device. Template helper — not a cloud language model.",
       "page": "products/study-assistant.html"
     },
     {
@@ -29,8 +29,8 @@
       "name": "UniVista",
       "status": "Live · Early Access",
       "kind": "App / platform",
-      "platforms": "Web (PWA) · Windows · Android · iPhone · TV later",
-      "blurb": "Universal camera, AI, security and automation platform. One interface, many cameras. Early Access: live view, Mira, local recording, privacy.",
+      "platforms": "Web / Add to Home Screen · this-device camera (ONVIF later)",
+      "blurb": "Early Access: this-device camera, local snapshots/clips, motion filter, Mira keywords. Not ONVIF/NVR yet.",
       "page": "products/univista.html"
     },
     {
@@ -38,8 +38,8 @@
       "name": "Vaani",
       "status": "Live · Early Access",
       "kind": "App / platform",
-      "platforms": "Web (PWA) · Windows · Android · iPhone",
-      "blurb": "Universal language & script AI. Languages, scripts and transliteration in one catalogue. Learn, trace, tutor, adaptive scores.",
+      "platforms": "Web / Add to Home Screen (not a native APK)",
+      "blurb": "Early Access: ~27 catalogue entries (not 800). Learn, trace, on-device tutor. Languages vs scripts kept separate.",
       "page": "products/language-ai.html"
     },
     {
@@ -47,8 +47,8 @@
       "name": "NEXCODE",
       "status": "Live · Early Access",
       "kind": "App / editor",
-      "platforms": "Web (PWA) · Windows · Android · iPhone",
-      "blurb": "Cross-device code editor. Host and mobile views, local files, sessions, command palette.",
+      "platforms": "Web / Add to Home Screen (same-browser Host/Mobile demo)",
+      "blurb": "In-browser editor with local files and command palette. Pairing is a demo, not a second physical phone.",
       "page": "products/nexcode.html"
     },
     {

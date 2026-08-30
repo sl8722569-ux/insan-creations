@@ -11,9 +11,14 @@
       "name": "J.A.R.V.I.S",
       "status": "Live · Early Access",
       "kind": "App",
-      "platforms": "Windows (Python) · Android APK (WebView companion) · Web companion (PWA)",
+      "platforms": "Windows · Android APK · Web companion",
       "blurb": "Personal AI assistant: voice, chat, apps, privacy-first permissions. Phase 1 [EARLY ACCESS] · Phase 2 [EARLY ACCESS FINAL ACT].",
-      "page": "products/jarvis.html"
+      "page": "products/jarvis.html",
+      "downloads": [
+        {"label": "Windows ZIP", "href": "https://github.com/sl8722569-ux/jarvis-assitant/releases/latest/download/JARVIS-Windows-Phase2.zip", "kind": "zip"},
+        {"label": "Android APK", "href": "https://github.com/sl8722569-ux/jarvis-assitant/releases/latest/download/JARVIS-Android.apk", "kind": "apk"},
+        {"label": "Open web", "href": "https://sl8722569-ux.github.io/jarvis-assitant/webapp/", "kind": "web"}
+      ]
     },
     {
       "id": "study-assistant",
@@ -22,7 +27,12 @@
       "kind": "App / platform",
       "platforms": "Web / Android APK / Add to Home Screen",
       "blurb": "Chat + Assignments. No class/board setup. SpaceXAI when INSAN Bridge is running.",
-      "page": "products/study-assistant.html"
+      "page": "products/study-assistant.html",
+      "downloads": [
+        {"label": "Android APK", "href": "https://github.com/sl8722569-ux/ai-study-assistant/releases/latest/download/StudyAssistant-Android.apk", "kind": "apk"},
+        {"label": "Source ZIP", "href": "https://github.com/sl8722569-ux/ai-study-assistant/archive/refs/heads/main.zip", "kind": "zip"},
+        {"label": "Open web", "href": "https://sl8722569-ux.github.io/ai-study-assistant/web/", "kind": "web"}
+      ]
     },
     {
       "id": "univista",
@@ -31,7 +41,12 @@
       "kind": "App / platform",
       "platforms": "Web / Android APK / this-device camera / LAN ONVIF-RTSP via INSAN Bridge",
       "blurb": "This-device camera plus LAN ONVIF/RTSP through INSAN Bridge. Mira uses SpaceXAI when the bridge has XAI_API_KEY.",
-      "page": "products/univista.html"
+      "page": "products/univista.html",
+      "downloads": [
+        {"label": "Android APK", "href": "https://github.com/sl8722569-ux/univista/releases/latest/download/UniVista-Android.apk", "kind": "apk"},
+        {"label": "Source ZIP", "href": "https://github.com/sl8722569-ux/univista/archive/refs/heads/main.zip", "kind": "zip"},
+        {"label": "Open web", "href": "https://sl8722569-ux.github.io/univista/web/", "kind": "web"}
+      ]
     },
     {
       "id": "language-ai",
@@ -40,7 +55,12 @@
       "kind": "App / platform",
       "platforms": "Web / Android APK / Add to Home Screen",
       "blurb": "Early Access: ~27 catalogue entries (not 800). Tutor uses SpaceXAI via INSAN Bridge when the key is set.",
-      "page": "products/language-ai.html"
+      "page": "products/language-ai.html",
+      "downloads": [
+        {"label": "Android APK", "href": "https://github.com/sl8722569-ux/universal-language-ai/releases/latest/download/Vaani-Android.apk", "kind": "apk"},
+        {"label": "Source ZIP", "href": "https://github.com/sl8722569-ux/universal-language-ai/archive/refs/heads/main.zip", "kind": "zip"},
+        {"label": "Open web", "href": "https://sl8722569-ux.github.io/universal-language-ai/web/", "kind": "web"}
+      ]
     },
     {
       "id": "nexcode",
@@ -49,7 +69,12 @@
       "kind": "App / editor",
       "platforms": "Web / Android APK / Host+phone pairing (PeerJS + Bridge)",
       "blurb": "In-browser editor. Pair a real phone with the 6-digit code. SpaceXAI via INSAN Bridge.",
-      "page": "products/nexcode.html"
+      "page": "products/nexcode.html",
+      "downloads": [
+        {"label": "Android APK", "href": "https://github.com/sl8722569-ux/nexcode/releases/latest/download/NEXCODE-Android.apk", "kind": "apk"},
+        {"label": "Source ZIP", "href": "https://github.com/sl8722569-ux/nexcode/archive/refs/heads/main.zip", "kind": "zip"},
+        {"label": "Open web", "href": "https://sl8722569-ux.github.io/nexcode/web/", "kind": "web"}
+      ]
     },
     {
       "id": "jarvis-web",
@@ -58,17 +83,26 @@
       "kind": "Website / PWA",
       "platforms": "Browser · Android · iPhone",
       "blurb": "J.A.R.V.I.S as a standalone app on Android, iPhone, and desktop (Install / Add to Home Screen).",
-      "page": "https://sl8722569-ux.github.io/jarvis-assitant/webapp/"
+      "page": "https://sl8722569-ux.github.io/jarvis-assitant/webapp/",
+      "downloads": [
+        {"label": "Companion ZIP", "href": "https://sl8722569-ux.github.io/jarvis-assitant/downloads/JARVIS-Android-WebCompanion.zip", "kind": "zip"},
+        {"label": "Open web", "href": "https://sl8722569-ux.github.io/jarvis-assitant/webapp/", "kind": "web"}
+      ]
     },
     {
       "id": "insan-cricket",
       "name": "INSAN CRICKET",
-      "status": "Live · 3D prototype v1.2",
+      "status": "Live · Premium 3D v1.3",
       "kind": "Game",
       "section": "game",
-      "platforms": "Web / landscape mobile · GitHub Pages",
-      "blurb": "Original 3D cricket career. Batting, bowling, catching, fielding, celebrations, trophy lift. Town-to-international. Not affiliated with Cricket 26 / IPL / ICC.",
-      "page": "products/insan-cricket.html"
+      "platforms": "Web / ZIP / Android APK · landscape mobile",
+      "blurb": "Original 3D cricket career. Riverbend Stadium, catching, fielding, trophy lift. Not affiliated with Cricket 26 / IPL / ICC.",
+      "page": "products/insan-cricket.html",
+      "downloads": [
+        {"label": "Download ZIP", "href": "https://sl8722569-ux.github.io/insan-cricket/downloads/INSAN-CRICKET-Web.zip", "kind": "zip"},
+        {"label": "Android APK", "href": "https://github.com/sl8722569-ux/insan-cricket/releases/latest/download/INSAN-CRICKET-Android.apk", "kind": "apk"},
+        {"label": "Play now", "href": "https://sl8722569-ux.github.io/insan-cricket/web/", "kind": "web"}
+      ]
     },
     {
       "id": "studio-site",
@@ -77,7 +111,11 @@
       "kind": "Website",
       "platforms": "Web",
       "blurb": "Studio home — catalogue of every creation and downloads.",
-      "page": "index.html"
+      "page": "index.html",
+      "downloads": [
+        {"label": "Download ZIP", "href": "https://github.com/sl8722569-ux/insan-creations/archive/refs/heads/main.zip", "kind": "zip"},
+        {"label": "Open site", "href": "https://sl8722569-ux.github.io/insan-creations/", "kind": "web"}
+      ]
     }
   ]
 }

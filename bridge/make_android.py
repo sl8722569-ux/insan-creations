@@ -66,6 +66,18 @@ APPS = [
         "release": "android-apk",
         "color": "0xFF0B1A3A",
     },
+    {
+        "id": "cricket",
+        "name": "INSANCricket",
+        "label": "INSAN CRICKET",
+        "package": "creations.insan.cricket",
+        "root": Path(r"C:\Users\shamu\INSAN-CRICKET"),
+        "url": "https://sl8722569-ux.github.io/insan-cricket/web/",
+        "icon": Path(r"C:\Users\shamu\INSAN-CRICKET\web\icon-192.png"),
+        "apk": "INSAN-CRICKET-Android.apk",
+        "release": "android-apk",
+        "color": "0xFF020617",
+    },
 ]
 
 SETTINGS = """pluginManagement {{

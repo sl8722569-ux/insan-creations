@@ -24,22 +24,10 @@
     <h1>Games</h1>
     <p class="lede">A separate catalogue from apps. Original worlds, original teams, no licensed IPL/ICC/EA content.</p>
     <div class="grid" id="catalog-games"></div>
-    <p class="lede" style="font-size:1rem;">Apps stay on the <a href="apps.html">apps list</a>. This page only lists games.</p>
+    <p class="lede" style="font-size:1rem;">Every game has a download. Apps stay on the <a href="apps.html">apps list</a>.</p>
     <footer>INSAN CREATIONS · Games</footer>
   </div>
-  <script>
-    fetch("products.json").then(function(r){return r.json();}).then(function(data){
-      var box=document.getElementById("catalog-games");
-      var games=(data.products||[]).filter(function(p){return p.section==="game";});
-      if(!games.length){box.innerHTML="<p>No games yet.</p>";return;}
-      games.forEach(function(p){
-        var el=document.createElement("article");
-        el.className="card";
-        el.innerHTML='<img class="app-icon" src="icons/insan-cricket-192.png" alt="" width="64" height="64" /><p class="badge">'+p.kind+" · "+p.status+"</p><h3>"+p.name+"</h3><p>"+p.blurb+'</p><a class="btn" href="'+p.page+'">Open</a>';
-        box.appendChild(el);
-      });
-    });
-  </script>
+  <script src="js/catalog.js"></script>
   <script src="js/stats.js" data-app="studio"></script>
 </body>
 </html>

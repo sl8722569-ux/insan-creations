@@ -27,17 +27,75 @@
       Not affiliated with Cricket 26, EA, IPL, BCCI, or ICC. Landscape on phones.
     </p>
     <section id="download" class="panel">
-      <h2>Download</h2>
-      <p>
-        <a class="btn" href="https://github.com/sl8722569-ux/insan-cricket/releases/latest/download/INSAN-CRICKET-Web.zip" data-download="insan-cricket" data-kind="zip">Download ZIP</a>
-        <a class="btn" href="https://github.com/sl8722569-ux/insan-cricket/releases/latest" data-download="insan-cricket" data-kind="apk">GitHub release</a>
-        <a class="btn ghost" href="https://sl8722569-ux.github.io/insan-cricket/web/" data-download="insan-cricket" data-kind="web">Play in browser</a>
-        <a class="btn ghost" href="https://github.com/sl8722569-ux/insan-cricket">GitHub</a>
+      <h2>Download — pick device and format</h2>
+      <div class="picker">
+        <div>
+          <label for="device">Which device?</label>
+          <select id="device">
+            <option value="android">Android</option>
+            <option value="web">Web browser</option>
+            <option value="windows">Windows</option>
+            <option value="ios">iPhone / iPad</option>
+            <option value="linux">Linux</option>
+            <option value="macos">macOS</option>
+          </select>
+        </div>
+        <div>
+          <label for="format">Format</label>
+          <select id="format">
+            <option value="webcomp">Android web companion ZIP</option>
+            <option value="apk">Android APK (WebView companion)</option>
+            <option value="zip">Web game ZIP</option>
+          </select>
+        </div>
+      </div>
+      <div class="status" id="status"></div>
+      <button class="btn" type="button" id="dl">Download</button>
+      <p class="status" style="min-height:0;">
+        Android: web companion ZIP (Chrome → Add to Home screen) or APK (WebView of the live game, sideload, not Play Store).
+        iPhone: open in Safari → Add to Home Screen. No native iOS app.
+        <a href="https://sl8722569-ux.github.io/insan-cricket/web/">Play in browser</a>
       </p>
-      <p class="status">ZIP: unzip and open <code>index.html</code> (needs internet for the 3D library). Android APK is not attached yet — GitHub token here cannot push the build workflow. The ZIP is the installable game now. Graphics are original low-poly Three.js, not a photoreal copy of WCC3 or Real Cricket 24.</p>
     </section>
     <footer>INSAN CREATIONS · Games</footer>
   </div>
+  <script>
+    var REL = "https://github.com/sl8722569-ux/insan-cricket/releases/latest/download/";
+    var PAGES = "https://sl8722569-ux.github.io/insan-cricket/downloads/";
+    var WEB = "https://sl8722569-ux.github.io/insan-cricket/web/";
+    var COMP = REL + "INSAN-CRICKET-Android-WebCompanion.zip";
+    var APK = REL + "INSAN-CRICKET-Android.apk";
+    var GAMEZIP = REL + "INSAN-CRICKET-Web.zip";
+    var MAP = {
+      android: { zip: COMP, webcomp: COMP, apk: APK },
+      web: { zip: GAMEZIP, webcomp: COMP, apk: null },
+      windows: { zip: GAMEZIP, webcomp: COMP, apk: null },
+      ios: { zip: null, webcomp: null, apk: null },
+      linux: { zip: GAMEZIP, webcomp: COMP, apk: null },
+      macos: { zip: GAMEZIP, webcomp: COMP, apk: null }
+    };
+    var device = document.getElementById("device");
+    var format = document.getElementById("format");
+    var status = document.getElementById("status");
+    function info() {
+      var d = device.value, f = format.value, url = MAP[d] && MAP[d][f];
+      if (d === "ios") { status.textContent = "No native iOS app. Opens the live game — Safari → Share → Add to Home Screen."; return; }
+      if (d === "web" && f === "apk") { status.textContent = "APK is Android-only. Use Play in browser, or pick Android."; return; }
+      if (d === "android" && f === "apk") { status.textContent = "Android APK: WebView of the live INSAN CRICKET game. Sideload; not Play Store. Landscape."; return; }
+      if (d === "android" && (f === "zip" || f === "webcomp")) { status.textContent = "Android web companion ZIP / PWA. Chrome → Add to Home screen. APK is the installable WebView wrapper."; return; }
+      if (url) { status.textContent = "Ready: " + f + " for " + d + "."; return; }
+      status.textContent = "That combo is not available. Android: web companion ZIP or APK. iPhone: web.";
+    }
+    document.getElementById("dl").onclick = function () {
+      var d = device.value, f = format.value;
+      if (window.INSAN_STATS) window.INSAN_STATS.download("insan-cricket", d === "web" || d === "ios" ? "web" : f);
+      if (d === "ios" || (d === "web" && f === "apk")) { location.href = WEB; return; }
+      var url = MAP[d] && MAP[d][f];
+      if (!url) { info(); return; }
+      location.href = url;
+    };
+    device.onchange = info; format.onchange = info; info();
+  </script>
   <script src="../js/stats.js" data-app="studio"></script>
 </body>
 </html>

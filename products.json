@@ -92,15 +92,15 @@
     {
       "id": "insan-cricket",
       "name": "INSAN CRICKET",
-      "status": "Live · Premium 3D v1.3",
+      "status": "Live · Premium 3D v1.4",
       "kind": "Game",
       "section": "game",
-      "platforms": "Web / ZIP / Android APK · landscape mobile",
+      "platforms": "Web / Android web companion ZIP / Android APK (WebView)",
       "blurb": "Original 3D cricket career. Riverbend Stadium, catching, fielding, trophy lift. Not affiliated with Cricket 26 / IPL / ICC.",
       "page": "products/insan-cricket.html",
       "downloads": [
-        {"label": "Download ZIP", "href": "https://github.com/sl8722569-ux/insan-cricket/releases/latest/download/INSAN-CRICKET-Web.zip", "kind": "zip"},
-        {"label": "GitHub release", "href": "https://github.com/sl8722569-ux/insan-cricket/releases/latest", "kind": "apk"},
+        {"label": "Android web companion ZIP", "href": "https://github.com/sl8722569-ux/insan-cricket/releases/latest/download/INSAN-CRICKET-Android-WebCompanion.zip", "kind": "zip"},
+        {"label": "Android APK", "href": "https://github.com/sl8722569-ux/insan-cricket/releases/latest/download/INSAN-CRICKET-Android.apk", "kind": "apk"},
         {"label": "Play now", "href": "https://sl8722569-ux.github.io/insan-cricket/web/", "kind": "web"}
       ]
     },

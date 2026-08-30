@@ -61,6 +61,16 @@
       "page": "https://sl8722569-ux.github.io/jarvis-assitant/webapp/"
     },
     {
+      "id": "insan-cricket",
+      "name": "INSAN CRICKET",
+      "status": "Live · 3D prototype",
+      "kind": "Game",
+      "section": "game",
+      "platforms": "Web / landscape mobile · GitHub Pages",
+      "blurb": "Original 3D cricket career game. Create a player, town-to-international path, toss, timing, Sagar Premier auction. Not affiliated with Cricket 26 / IPL / ICC.",
+      "page": "products/insan-cricket.html"
+    },
+    {
       "id": "studio-site",
       "name": "INSAN CREATIONS Website",
       "status": "Live",

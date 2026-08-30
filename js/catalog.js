@@ -8,37 +8,36 @@ fetch("products.json")
       box.innerHTML = "<p>No creations listed yet.</p>";
       return;
     }
-    list.forEach(function (p) {
+    function iconFor(p) {
+      if (p.id === "jarvis" || p.id === "jarvis-web") return "icons/jarvis-192.png";
+      if (p.id === "study-assistant") return "icons/study-assistant-192.png";
+      if (p.id === "univista") return "icons/univista-192.png";
+      if (p.id === "language-ai") return "icons/language-ai-192.png";
+      if (p.id === "nexcode") return "icons/nexcode-192.png";
+      if (p.id === "insan-cricket") return "icons/insan-cricket-192.png";
+      return "icons/insan-creations-192.png";
+    }
+    function card(p) {
       var el = document.createElement("article");
       el.className = "card";
       var href = p.page || "#";
-      var icon = p.icon || ("icons/" + (p.id || "") + "-192.png");
-      if (p.id === "jarvis" || p.id === "jarvis-web") icon = "icons/jarvis-192.png";
-      if (p.id === "study-assistant") icon = "icons/study-assistant-192.png";
-      if (p.id === "univista") icon = "icons/univista-192.png";
-      if (p.id === "language-ai") icon = "icons/language-ai-192.png";
-      if (p.id === "nexcode") icon = "icons/nexcode-192.png";
-      if (p.id === "studio-site") icon = "icons/insan-creations-192.png";
-      if (String(p.page || "").indexOf("products/") === 0) {
-        icon = "../" + icon.replace(/^icons/, "icons");
-        // catalog on home uses icons/ from root; on products pages catalog isn't used
-      }
-      var iconSrc = "icons/";
-      if (p.id === "jarvis" || p.id === "jarvis-web") iconSrc += "jarvis-192.png";
-      else if (p.id === "study-assistant") iconSrc += "study-assistant-192.png";
-      else if (p.id === "univista") iconSrc += "univista-192.png";
-      else if (p.id === "language-ai") iconSrc += "language-ai-192.png";
-      else if (p.id === "nexcode") iconSrc += "nexcode-192.png";
-      else iconSrc += "insan-creations-192.png";
       el.innerHTML =
-        '<img class="app-icon" src="' + iconSrc + '" alt="" width="64" height="64" />' +
+        '<img class="app-icon" src="' + iconFor(p) + '" alt="" width="64" height="64" />' +
         '<p class="badge">' + (p.kind || "Creation") + " · " + (p.status || "") + "</p>" +
         "<h3>" + (p.name || "") + "</h3>" +
         "<p>" + (p.blurb || "") + "</p>" +
         (p.platforms ? '<p class="badge">' + p.platforms + "</p>" : "") +
         '<a class="btn" href="' + href + '">Open</a>';
-      box.appendChild(el);
-    });
+      return el;
+    }
+    var games = list.filter(function (p) { return (p.section || "") === "game"; });
+    var apps = list.filter(function (p) { return (p.section || "") !== "game"; });
+    apps.forEach(function (p) { box.appendChild(card(p)); });
+    var gbox = document.getElementById("catalog-games");
+    if (gbox) {
+      if (!games.length) gbox.innerHTML = "<p>No games listed yet.</p>";
+      else games.forEach(function (p) { gbox.appendChild(card(p)); });
+    }
   })
   .catch(function () {
     var box = document.getElementById("catalog");
